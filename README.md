@@ -1,28 +1,54 @@
 # 2D Car Dashboard
+This is a slick car Dashboard useful for live simulation.
+Use React component `VehicleDashboard` from package 2d-car-dashboard.
+You should provide a correct JSON format for `gps` and `signals` props.
 
-This is a slick car Dashboard usefull for live simulation.
-Use React component VehicleDashboard from package 2d-car-dashboard.
-You should provide a correct JSON format for gps and signals props.
+## Library build
 
-# GPS JSON format
-This should be provide as follow :
+Launch in terminal `npm run build` . This will generate a folder named 2d-car-dashboard containing all necessary files.
+
+## Download package
+
+2d-car-dashboard package can be downloaded. Launch this command below :
+
+`npm install 2d-car-dashboard`
+
+## Usage
+
+### `VehicleDashboard` component
+
+In you application, you need first to import the corresponding component as follow :
+
+`import { VehicleDashboard } from '2d-car-dashboard';`
+
+Then, you can use your components as follow :
+
+`<VehicleDashboard signals={s} gps={g}/>`
+
+
+
+### GPS JSON format
+This should be provided to gps prop as follow :
+```
 {
   "Latitude": {
       "value": "48.994404",
-      "unit": "°"
-  },
+      "unit": "°"},
+    
   "Longitude": {
       "value": "2.224964",
       "unit": "°"
   },
   "UIN": "CAR'S UIN"
 }
+```
 
 Car's position will be displayed on the map.
 
-# Signals JSON format
+### Signals JSON format
 Signals JSON provides several values that can affect the dashboard. Note that all values are required only if changes are needed.
-Here is the JSON format :
+Here is the JSON format to be provided to signals prop :
+```
 {
   "ETAT_OUVRANTS": {
       "value": "0",
@@ -110,5 +136,4 @@ Here is the JSON format :
   },
   "UIN": "CAR'S UIN"
 }
-
-TRuc myuchs
+```
