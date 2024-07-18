@@ -11,11 +11,11 @@ export interface ValueUnit {
 }
 
 export type ValueUnitsDic = {
-  [key: string]: ValueUnit
+  [key: string]: ValueUnit | string;
   
 }
 
-export type VehicleDatas = ValueUnitsDic & { UIN: string } | undefined;
+export type VehicleDatas = ValueUnitsDic | undefined;
 
 export interface VehicleDatasInterface {
   signals: VehicleDatas,
