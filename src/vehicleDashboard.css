@@ -1,0 +1,122 @@
+.leaflet-control-attribution {
+  display: none;
+}
+
+#dashboard-container {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#top {
+  order: -1;
+  flex: 1 0 100%;
+}
+
+#top svg {
+  width: 100%;
+}
+
+.dash-gauge {
+  width: 19%;
+
+}
+
+.dash-gauge svg {
+  width: 200%;
+  min-width: 150px;
+}
+
+#speed-gauge svg {
+  margin-left: -100%;
+}
+
+#mid {
+  width: 59%;
+  background-color: #AFAFAF;
+  display: grid;
+  float: left;
+  z-index: -10;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  position: relative;
+  top: -3px;
+  border:10px;
+  border-radius: 100px;
+  border-style: solid;
+  border-color: #AFAFAF;
+}
+
+#mid .leaflet-container {
+  border-radius: 100px;
+}
+
+#steerwheel {
+  width: 100%;
+  margin-top: -175px;
+  display: inline-grid;
+  justify-content: center;
+}
+
+#steerwheel img {
+  opacity:80%;
+  transition: ease-out;
+  transition-duration: 1s;
+  width : 80%;
+  margin-left:10%;
+}
+
+@media (width <= 1225px) {
+  #mid {
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+    border-radius: 100px;
+    border:1vw;
+    border-radius: 100px;
+    border-style: solid;
+    border-color: #AFAFAF;
+  }
+}
+
+@media (width <= 1070px) {
+  #mid {
+    margin-top: 8vw;
+    margin-bottom: 8vw;
+  }
+
+  #steerwheel img {
+    width : 60%;
+    margin-left:20%;
+  }
+}
+
+@media (width <= 855px) {
+  #mid {
+    margin-top: 11vw;
+    margin-bottom: 11vw;
+  }
+
+  #top {
+    margin-bottom : -40px;
+  }
+}
+
+@media (width <= 720px) {
+  #mid {
+    margin-top: 15vw;
+    margin-bottom: 15vw;
+  }
+
+  #top {
+    margin-bottom : -80px;
+  }
+}
+
+@media (width <= 500px) {
+  #mid {
+    margin-top: 25vw;
+    margin-bottom: 25vw;
+  }
+}
+

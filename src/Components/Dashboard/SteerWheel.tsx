@@ -17,7 +17,7 @@ const SteerWheel: FC<{ data: any }> = ({ data }) => {
 
   //render
   return (
-    <div className="steerwheel">
+    <div id="steerwheel">
       <img ref={imgRef} id="wheel" src={volant} alt="car_wheel" width="660" />
     </div>
   );

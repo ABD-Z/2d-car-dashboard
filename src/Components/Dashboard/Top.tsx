@@ -158,7 +158,7 @@ const Top: FC<DataTypes> = ({ data }) => {
   };
   //render
   return (
-    <div className='top'>
+    <div id='top'>
       <svg
         ref={svgRef}
         viewBox="0 0 720 80"

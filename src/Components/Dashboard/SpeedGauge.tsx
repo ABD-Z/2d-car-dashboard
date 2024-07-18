@@ -385,7 +385,7 @@ const SpeedGauge: FC<DataTypes> = ({ data }) => {
 
   //render
   return (
-    <div className='speed-gauge dash-gauge'>
+    <div className='dash-gauge' id='speed-gauge'>
       <svg
         ref={svgRef}
         transform={`translate(0,0)`}

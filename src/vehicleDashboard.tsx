@@ -48,7 +48,7 @@ const VehicleDashboard: FC<VehicleDatasInterface> = ({signals, gps}) => {
 
   return (
     <div>
-          <div className="dashboard-container">
+          <div id="dashboard-container">
             <Top data={extractedTop} />
             <RpmGauge data={extractedRpm} />
             <MidMap value={extractedMap} />

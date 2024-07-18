@@ -40,7 +40,7 @@ const MidMap: FC<any> = ({ value }) => {
 
   //render
   return (
-    <div className="mid">
+    <div id="mid">
       <MapContainer
         center={coordinates}
         zoom={MAP_ZOOM}
