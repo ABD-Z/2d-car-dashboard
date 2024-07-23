@@ -20,6 +20,8 @@ export type VehicleDatas = ValueUnitsDic | undefined;
 export interface VehicleDatasInterface {
   signals: VehicleDatas,
   gps: VehicleDatas
+  fps?: number,
+  zoom?: number
 }
 
 interface TopProps {

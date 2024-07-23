@@ -6,7 +6,7 @@ const MAP_URL = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
 const MidMap: FC<any> = ({ value }) => {
   const [coordinates, setCoordinates] = useState<[number, number]>([48.8566, 2.3522])
   const mapRef = useRef(null);
-  const MAP_ZOOM = 13;
+  var MAP_ZOOM = value['zoom'];
 
   let LAT: number
   let LON: number

@@ -18,17 +18,22 @@ import {
   steerKeys,
 } from "./Helpers";
 
-const VehicleDashboard: FC<VehicleDatasInterface> = ({signals, gps}) => {
+const VehicleDashboard: FC<VehicleDatasInterface> = ({signals, gps, fps=-1, zoom=15}) => {
     const [signalsState, setSignals] = useState<VehicleDatas>(undefined);
     const [gpsState, setGps] = useState<VehicleDatas>(undefined);
+    const [drawState, setDraw] = useState<boolean>(true);
+
 
     useEffect(() => {
+      if (drawState) {
         setSignals(signals);
-    }, [signals]);
-
-    useEffect(() => {
         setGps(gps);
-    }, [gps]);
+        if (fps > 0) {
+          setDraw(false); 
+          setTimeout(() => {setDraw(true);}, 1000/fps);
+        }
+      }
+    }, [signals, gps]);
 
     function extractKeys(signals: VehicleDatas, keys: string[]) {
         if (signals) {
@@ -51,7 +56,7 @@ const VehicleDashboard: FC<VehicleDatasInterface> = ({signals, gps}) => {
           <div id="dashboard-container">
             <Top data={extractedTop} />
             <RpmGauge data={extractedRpm} />
-            <MidMap value={extractedMap} />
+            <MidMap value={ {...extractedMap, "zoom":zoom} } />
             <SpeedGauge data={extractedSpeed} />
             <SteerWheel data={extractedSteer} />
           </div>
