@@ -119,7 +119,7 @@ const RpmGauge: FC<DataTypes> = ({ data }) => {
   useEffect(() => {
     if (data) {
       if (data?.REGIME_MOTEUR) {
-        setValueRpm(Number(data?.REGIME_MOTEUR?.value), DEFAULT_REFRESH_RATE);
+        setValueRpm(Number(data?.REGIME_MOTEUR?.value));
       }
       setBeltCondSignalFill(setRedSignalFillValue(beltCondValue));
       setBeltPassSignalFill(setRedSignalFillValue(beltPassValue));
@@ -132,7 +132,7 @@ const RpmGauge: FC<DataTypes> = ({ data }) => {
     }
   }, [data]);
 
-  const setValueRpm = (value: number, duration: number) => {
+  const setValueRpm = (value: number) => {
     const minAngle = -160;
     const maxAngle = 90;
     const angleRange = maxAngle - minAngle;
@@ -141,7 +141,7 @@ const RpmGauge: FC<DataTypes> = ({ data }) => {
     if (needleRef) {
       transition()
         .select(() => needleRef.node())
-        .duration(duration)
+        .duration(DEFAULT_REFRESH_RATE)
         .ease(easeCubicInOut)
         .attr("transform", `rotate(${angle})`);
       rpmText.text((value / 1000).toFixed(1));

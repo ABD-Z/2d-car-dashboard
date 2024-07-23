@@ -88,7 +88,7 @@ const SpeedGauge: FC<DataTypes> = ({ data }) => {
         KILOMETRAGE,
       } = data;
       if (VITESSE_VEHICULE) {
-        setValueSpeed(Number(VITESSE_VEHICULE?.value), DEFAULT_REFRESH_RATE);
+        setValueSpeed(Number(VITESSE_VEHICULE?.value));
       }
       if (KILOMETRAGE) {
         kiloText.text(`${Number(KILOMETRAGE?.value)} km`);
@@ -102,7 +102,7 @@ const SpeedGauge: FC<DataTypes> = ({ data }) => {
     }
   }, [data]);
 
-  const setValueSpeed = (value: number, duration: number) => {
+  const setValueSpeed = (value: number) => {
     const minAngle = -160;
     const maxAngle = 150;
     const angleRange = maxAngle - minAngle;
@@ -111,7 +111,7 @@ const SpeedGauge: FC<DataTypes> = ({ data }) => {
     if (needleRef) {
       transition()
         .select(() => needleRef.node())
-        .duration(duration)
+        .duration(DEFAULT_REFRESH_RATE)
         .ease(easeCubicInOut)
         .attr("transform", `rotate(${angle})`);
 
