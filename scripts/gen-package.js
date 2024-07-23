@@ -32,12 +32,22 @@ async function writePackageJSON() {
 
 async function copyAdditionnalFiles() {
   const targetPath = path.resolve(__dirname, `../${libraryName}/`);
+  
   const readmePath = path.resolve(__dirname, '../README.md');
   fs.copyFileSync(readmePath, path.resolve(targetPath, 'README.md'));
   console.log('Copied README.md to target directory');
+  
   const licensePath = path.resolve(__dirname, '../LICENCE');
   fs.copyFileSync(licensePath, path.resolve(targetPath, 'LICENCE'));
   console.log('Copied LICENSE to target directory');
+
+  const docimageDesktop = path.resolve(__dirname, '../dashboardPC.png');
+  fs.copyFileSync(docimageDesktop, path.resolve(targetPath, 'dashboardPC.png'));
+  console.log('Copied dashboardPC.png to target directory');
+
+  const docimageMobile = path.resolve(__dirname, '../dashboardMobile.png');
+  fs.copyFileSync(docimageMobile, path.resolve(targetPath, 'dashboardMobile.png'));
+  console.log('Copied dashboardMobile.png to target directory');
 }
 
 moveDist();
