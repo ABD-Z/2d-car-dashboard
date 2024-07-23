@@ -1,7 +1,17 @@
 # 2D Car Dashboard
 This is a slick car Dashboard useful for live simulation.
 Use React component `VehicleDashboard` from package 2d-car-dashboard.
-You should provide a correct JSON format for `gps` and `signals` props.
+You should provide a correct JSON format for `gps` and `signals` props and optionayly `fps` and `zoom` props.
+
+Desktop view:
+
+![dashboard desktop](./dashboardPC.png)
+
+Mobile view:
+
+![Dashboard on mobile](./dashboardMobile.png)
+
+
 
 ## Library build
 
@@ -19,15 +29,18 @@ Launch in terminal `npm run build` . This will generate a folder named 2d-car-da
 
 In you application, you need first to import the corresponding component as follow :
 
-`import { VehicleDashboard } from '2d-car-dashboard';`
+`import { VehicleDashboard, VehicleDatas } from '2d-car-dashboard';`
 
 Then, you can use your components as follow :
 
-`<VehicleDashboard signals={s} gps={g}/>`
+`<VehicleDashboard signals={s} gps={g} fps={f} zoom={z}/>`  
+
+`signals`  and  `g` are of type `VehicleDatas`. 
+`fps` and `zoom` are optional, they are both numbers.
 
 
 
-### GPS JSON format
+### `gps` JSON format
 This should be provided to gps prop as follow :
 ```
 {
@@ -45,7 +58,7 @@ This should be provided to gps prop as follow :
 
 Car's position will be displayed on the map.
 
-### Signals JSON format
+### `signals` JSON format
 Signals JSON provides several values that can affect the dashboard. Note that all values are required only if changes are needed.
 Here is the JSON format to be provided to signals prop :
 ```
@@ -137,3 +150,15 @@ Here is the JSON format to be provided to signals prop :
   "UIN": "CAR'S UIN"
 }
 ```
+
+### Optional props
+
+#### `fps`
+
+`fps` is used to limit the rendering to a certain frame rate. If `fps` is below or equal zero, there is no such limitation.
+Default value : -1
+
+#### `zoom`
+
+`zoom` is used to set the zoom on dashboard's map. Bigger value corresponds to bigger zoom.
+Default value : 15
