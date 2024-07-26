@@ -5,11 +5,11 @@ You should provide a correct JSON format for `gps` and `signals` props and optio
 
 Desktop view:
 
-![dashboard desktop](./dashboardPC.png)
+![dashboard desktop](https://raw.githubusercontent.com/ABD-Z/2d-car-dashboard/main/dashboardPC.png)
 
 Mobile view:
 
-![Dashboard on mobile](./dashboardMobile.png)
+![Dashboard on mobile](https://raw.githubusercontent.com/ABD-Z/2d-car-dashboard/main/dashboardMobile.png)
 
 
 
