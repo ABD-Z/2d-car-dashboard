@@ -17,8 +17,10 @@ import {
   mapKeys,
   steerKeys,
 } from "./Helpers";
+//Assets
+import { Images } from "./Assets";
 
-const VehicleDashboard: FC<VehicleDatasInterface> = ({signals, gps, fps=-1, zoom=15}) => {
+const VehicleDashboard: FC<VehicleDatasInterface> = ({signals, gps, fps=-1, zoom=15, steerwheelImage=Images.Steerwheel}) => {
     const [signalsState, setSignals] = useState<VehicleDatas>(undefined);
     const [gpsState, setGps] = useState<VehicleDatas>(undefined);
     const [drawState, setDraw] = useState<boolean>(true);
@@ -58,7 +60,7 @@ const VehicleDashboard: FC<VehicleDatasInterface> = ({signals, gps, fps=-1, zoom
             <RpmGauge data={extractedRpm} />
             <MidMap value={ {...extractedMap, "zoom":zoom} } />
             <SpeedGauge data={extractedSpeed} />
-            <SteerWheel data={extractedSteer} />
+            <SteerWheel data={{...extractedSteer, "steerwheelImage":steerwheelImage} } />
           </div>
       
     </div>

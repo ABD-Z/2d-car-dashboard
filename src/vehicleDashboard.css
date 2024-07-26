@@ -65,6 +65,7 @@
   transition-duration: 1s;
   width : 80%;
   margin-left:10%;
+  max-width: 660px;
 }
 
 @media (width <= 1225px) {

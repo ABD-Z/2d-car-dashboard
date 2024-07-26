@@ -21,7 +21,8 @@ export interface VehicleDatasInterface {
   signals: VehicleDatas,
   gps: VehicleDatas
   fps?: number,
-  zoom?: number
+  zoom?: number,
+  steerwheelImage?: string
 }
 
 interface TopProps {

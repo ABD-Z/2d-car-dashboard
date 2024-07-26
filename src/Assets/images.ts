@@ -24,7 +24,7 @@ import SeeOnMap from "./Svgs/Dashboard/SeeOnMap";
 import SOC from "./Svgs/Dashboard/Soc";
 
 //images
-import Volant from "../Assets/Images/volant-peugeot.png";
+import Steerwheel from "../Assets/Images/steerwheel.png";
 
 export const Svgs = {
   UpTopDots,
@@ -52,5 +52,5 @@ export const Svgs = {
   Dashboard,
 };
 export const Images = {
-  Volant,
+  Steerwheel,
 };

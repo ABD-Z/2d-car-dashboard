@@ -36,13 +36,13 @@ Then, you can use your components as follow :
 `<VehicleDashboard signals={s} gps={g} fps={f} zoom={z}/>`  
 
 `signals`  and  `g` are of type `VehicleDatas`. 
-`fps` and `zoom` are optional, they are both numbers.
+`fps`, `zoom` and `steerwheelImage` are optional. The first two are numbers whereas the third one is the assets (image or SVG) imported as a resource.
 
 
 
 ### `gps` JSON format
 This should be provided to gps prop as follow :
-```
+```json
 {
   "Latitude": {
       "value": "48.994404",
@@ -61,7 +61,7 @@ Car's position will be displayed on the map.
 ### `signals` JSON format
 Signals JSON provides several values that can affect the dashboard. Note that all values are required only if changes are needed.
 Here is the JSON format to be provided to signals prop :
-```
+```json
 {
   "ETAT_OUVRANTS": {
       "value": "0",
@@ -162,3 +162,12 @@ Default value : -1
 
 `zoom` is used to set the zoom on dashboard's map. Bigger value corresponds to bigger zoom.
 Default value : 15
+
+#### `steerwheelImage`
+
+This prop makes possible to change the appearance of the steer wheel image. You must provide an imported resource as in the example below :
+
+```react
+import i from "imagePath"
+<VehicleDashboard signals={s} gps={g} fps={f} zoom={z} steerwheelImage={i}/>
+```
