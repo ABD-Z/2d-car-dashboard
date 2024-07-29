@@ -19,7 +19,7 @@
 }
 
 .dash-gauge {
-  width: 19%;
+  width: 20%;
 
 }
 
@@ -33,7 +33,7 @@
 }
 
 #mid {
-  width: 59%;
+  width: 60%;
   background-color: #AFAFAF;
   display: grid;
   float: left;
@@ -46,6 +46,7 @@
   border-radius: 100px;
   border-style: solid;
   border-color: #AFAFAF;
+  box-sizing: border-box;
 }
 
 #mid .leaflet-container {
