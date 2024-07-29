@@ -158,7 +158,7 @@ const Top: FC<DataTypes> = ({ data }) => {
   };
   //render
   return (
-    <div id='top'>
+    <div id='_2d-car-dashboard-top'>
       <svg
         ref={svgRef}
         viewBox="0 0 720 80"

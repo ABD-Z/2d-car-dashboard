@@ -2,37 +2,37 @@
   display: none;
 }
 
-#dashboard-container {
+#_2d-car-dashboard-container {
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
 
-#top {
+#_2d-car-dashboard-top {
   order: -1;
   flex: 1 0 100%;
 }
 
-#top svg {
+#_2d-car-dashboard-top svg {
   width: 100%;
 }
 
-.dash-gauge {
+._2d-car-dashboard-gauge {
   width: 20%;
 
 }
 
-.dash-gauge svg {
+._2d-car-dashboard-gauge svg {
   width: 200%;
   min-width: 150px;
 }
 
-#speed-gauge svg {
+#_2d-car-dashboard-speed-gauge svg {
   margin-left: -100%;
 }
 
-#mid {
+#_2d-car-dashboard-mid {
   width: 60%;
   background-color: #AFAFAF;
   display: grid;
@@ -49,18 +49,18 @@
   box-sizing: border-box;
 }
 
-#mid .leaflet-container {
+#_2d-car-dashboard-mid .leaflet-container {
   border-radius: 100px;
 }
 
-#steerwheel {
+#_2d-car-dashboard-steerwheel {
   width: 100%;
   margin-top: -175px;
   display: inline-grid;
   justify-content: center;
 }
 
-#steerwheel img {
+#_2d-car-dashboard-steerwheel img {
   opacity:80%;
   transition: ease-out;
   transition-duration: 1s;
@@ -70,7 +70,7 @@
 }
 
 @media (width <= 1225px) {
-  #mid {
+  #_2d-car-dashboard-mid {
     margin-top: 4vw;
     margin-bottom: 4vw;
     border-radius: 100px;
@@ -82,41 +82,41 @@
 }
 
 @media (width <= 1070px) {
-  #mid {
+  #_2d-car-dashboard-mid {
     margin-top: 8vw;
     margin-bottom: 8vw;
   }
 
-  #steerwheel img {
+  #_2d-car-dashboard-steerwheel img {
     width : 60%;
     margin-left:20%;
   }
 }
 
 @media (width <= 855px) {
-  #mid {
+  #_2d-car-dashboard-mid {
     margin-top: 11vw;
     margin-bottom: 11vw;
   }
 
-  #top {
+  #_2d-car-dashboard-top {
     margin-bottom : -40px;
   }
 }
 
 @media (width <= 720px) {
-  #mid {
+  #_2d-car-dashboard-mid {
     margin-top: 15vw;
     margin-bottom: 15vw;
   }
 
-  #top {
+  #_2d-car-dashboard-top {
     margin-bottom : -80px;
   }
 }
 
 @media (width <= 500px) {
-  #mid {
+  #_2d-car-dashboard-mid {
     margin-top: 25vw;
     margin-bottom: 25vw;
   }

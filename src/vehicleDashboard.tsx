@@ -55,7 +55,7 @@ const VehicleDashboard: FC<VehicleDatasInterface> = ({signals, gps, fps=-1, zoom
 
   return (
     <div>
-          <div id="dashboard-container">
+          <div id="_2d-car-dashboard-container">
             <Top data={extractedTop} />
             <RpmGauge data={extractedRpm} />
             <MidMap value={ {...extractedMap, "zoom":zoom} } />

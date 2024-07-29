@@ -40,7 +40,7 @@ const MidMap: FC<any> = ({ value }) => {
 
   //render
   return (
-    <div id="mid">
+    <div id="_2d-car-dashboard-mid">
       <MapContainer
         center={coordinates}
         zoom={MAP_ZOOM}

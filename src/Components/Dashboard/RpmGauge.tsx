@@ -417,7 +417,7 @@ const RpmGauge: FC<DataTypes> = ({ data }) => {
 
   //render
   return (
-    <div className='dash-gauge' id='rpm-gauge '>
+    <div className='_2d-car-dashboard-gauge' id='_2d-car-dashboard-rpm-gauge '>
       <svg
         ref={svgRef}
         transform={`translate(0,0)`}
